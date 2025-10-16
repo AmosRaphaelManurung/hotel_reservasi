@@ -83,7 +83,15 @@ class RoomSeeder extends Seeder
                 'price' => 1500000,
                 'description' => 'Suite mewah dengan 2 kamar tidur, ruang tamu, ruang makan, dapur kecil, jacuzzi, dan pemandangan panorama.',
                 'is_available' => true
-            ]
+            ],
+            [
+                'name' => 'Superior Room 505',
+                'type' => 'Superior',
+                'price' => 1000000,
+                'description' => 'Rumah mewah dengan 3 kamar tidur, ruang tamu, ruang makan, dapur kecil, jacuzzi, dan pemandangan panorama, kolam berenang.',
+                'is_available' => true
+            ],
+            
         ];
 
         foreach ($rooms as $room) {
