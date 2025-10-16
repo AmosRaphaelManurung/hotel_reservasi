@@ -192,3 +192,34 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+daftar pembagian tugas
+Amos:
+1.Menambahkan fitur filter agar pengguna dapat menampilkan daftar booking berdasarkan tipe kamar yang dipilih.
+
+2.Menguji seluruh fitur aplikasi termasuk input, validasi, penyimpanan data, tampilan daftar booking, dan filter.
+
+3.Melakukan debugging untuk memastikan semua fungsi berjalan dengan baik tanpa error.
+
+Daniel:
+1.Mengimplementasikan penyimpanan data booking menggunakan localStorage.
+
+2.Menyusun struktur data booking dalam format JSON agar mudah diolah dan ditampilkan kembali.
+
+3.Membuat fungsi untuk menampilkan seluruh data booking dari localStorage ke dalam tabel atau daftar pada halaman web.
+
+Ranty:
+1.Menangani validasi input untuk memastikan semua form telah diisi dengan benar.
+
+2.Membuat logika validasi khusus untuk memastikan tanggal check-out harus lebih besar dari tanggal check-in.
+
+3.Menampilkan pesan peringatan atau error message kepada pengguna jika terdapat input yang tidak valid.
+
+Caldera:
+1.Mendesain tampilan halaman utama menggunakan HTML dan CSS.
+
+2.Membuat form booking yang berisi: nama, tanggal check-in, tanggal check-out, tipe kamar, dan jumlah tamu.
+
+3.Menyusun layout daftar booking serta bagian filter agar terlihat rapi dan mudah digunakan.
+
+4.Menjamin tampilan website responsif di berbagai ukuran layar dan memiliki pengalaman pengguna (UI/UX) yang baik.
