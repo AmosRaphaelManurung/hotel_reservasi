@@ -9,7 +9,7 @@ Sistem pemesanan kamar hotel berbasis web yang dibangun menggunakan Laravel.
   - Tanggal check-in dan check-out
   - Tipe kamar (Standard, Deluxe, Suite, Family, Presidential)
   - Jumlah tamu
-  - Pilih kamar spesifik (opsional)
+  - Pilih kamar spesifik (opsional) 
 
 - ✅ **Validasi**: 
   - Tanggal check-out harus lebih besar dari check-in
