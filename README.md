@@ -196,5 +196,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 pembagian tugas 
 grace caldera :
 - PM
-
+ranty pakpahan:
+mengerjakan view
 
