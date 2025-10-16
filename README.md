@@ -1,11 +1,144 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt=" "></a></p>
+# Hotel Reservation System (Sistem Pemesanan Kamar Hotel)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem pemesanan kamar hotel berbasis web yang dibangun menggunakan Laravel.
+
+## Fitur Utama
+
+- ✅ **Form Booking**: Formulir pemesanan dengan validasi lengkap
+  - Nama tamu
+  - Tanggal check-in dan check-out
+  - Tipe kamar (Standard, Deluxe, Suite, Family, Presidential)
+  - Jumlah tamu
+  - Pilih kamar spesifik (opsional)
+
+- ✅ **Validasi**: 
+  - Tanggal check-out harus lebih besar dari check-in
+  - Validasi format tanggal
+  - Validasi required fields
+
+- ✅ **Penyimpanan Data**:
+  - Data disimpan di database SQLite
+  - Data juga disimpan di localStorage browser untuk backup
+
+- ✅ **Daftar Booking**:
+  - Menampilkan semua booking dari database
+  - Menampilkan booking dari localStorage
+  - Tombol hapus data localStorage
+
+- ✅ **Filter Booking**:
+  - Filter booking berdasarkan tipe kamar
+  - Berlaku untuk data database dan localStorage
+
+- ✅ **UI Sederhana**:
+  - Design minimalis dan responsive
+  - Mudah digunakan
+  - Navigasi yang jelas
+
+## Teknologi yang Digunakan
+
+- **Backend**: Laravel 11.x
+- **Database**: SQLite
+- **Frontend**: Blade Template, HTML, CSS, JavaScript
+- **Storage**: Database + LocalStorage
+
+## Cara Instalasi
+
+1. Clone repository ini
+```bash
+git clone <repository-url>
+cd hotel_reservasi
+```
+
+2. Install dependencies
+```bash
+composer install
+```
+
+3. Copy file .env
+```bash
+copy .env.example .env
+```
+
+4. Generate application key
+```bash
+php artisan key:generate
+```
+
+5. Jalankan migration dan seeder
+```bash
+php artisan migrate:fresh --seed
+```
+
+6. Jalankan server development
+```bash
+php artisan serve
+```
+
+7. Akses aplikasi di browser
+```
+http://127.0.0.1:8000
+```
+
+## Struktur Database
+
+### Tabel: rooms
+- id
+- name (nama kamar)
+- type (tipe kamar)
+- price (harga)
+- description (deskripsi)
+- is_available (status ketersediaan)
+- timestamps
+
+### Tabel: bookings
+- id
+- guest_name (nama tamu)
+- check_in (tanggal check-in)
+- check_out (tanggal check-out)
+- room_type (tipe kamar)
+- guest_count (jumlah tamu)
+- room_id (foreign key ke tabel rooms)
+- timestamps
+
+## Fitur LocalStorage
+
+Data booking juga disimpan di localStorage browser dengan key `hotelBookings`. Ini memungkinkan:
+- Data tetap tersimpan meskipun browser ditutup
+- Backup data di sisi client
+- Dapat dihapus kapan saja melalui tombol "Hapus Data LocalStorage"
+
+## Screenshot
+
+### 1. Form Booking
+Halaman untuk membuat booking baru dengan validasi lengkap.
+
+### 2. Daftar Booking
+Menampilkan semua booking dari database dan localStorage dengan fitur filter.
+
+## Pengembangan Selanjutnya
+
+Beberapa fitur yang bisa ditambahkan:
+- [ ] Autentikasi user
+- [ ] Update dan delete booking
+- [ ] Perhitungan total harga
+- [ ] Status pembayaran
+- [ ] Export data ke PDF/Excel
+- [ ] Email konfirmasi booking
+- [ ] Dashboard admin
+- [ ] Pencarian booking
+
+## Kontributor
+
+Setiap anggota kelompok harus berkontribusi melalui GitHub dengan:
+- Commit yang jelas
+- Branch feature yang terorganisir
+- Pull request untuk review
+
+## Lisensi
+
+Project ini dibuat untuk keperluan pembelajaran.
+
+---
 
 ## About Laravel
 

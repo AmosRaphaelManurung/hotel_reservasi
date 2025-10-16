@@ -21,5 +21,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Jalankan RoomSeeder untuk mengisi data kamar
+        $this->call([
+            RoomSeeder::class,
+        ]);
     }
 }
