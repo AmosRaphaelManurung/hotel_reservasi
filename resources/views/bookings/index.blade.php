@@ -102,23 +102,23 @@
 
 @section('scripts')
 <script>
-    // Validasi tanggal check-out harus lebih besar dari check-in
+    
     document.getElementById('check_in').addEventListener('change', function() {
         const checkInDate = new Date(this.value);
         const checkOutInput = document.getElementById('check_out');
         
-        // Set minimum check-out date to 1 day after check-in
+        
         checkInDate.setDate(checkInDate.getDate() + 1);
         const minCheckOut = checkInDate.toISOString().split('T')[0];
         checkOutInput.min = minCheckOut;
         
-        // Reset check-out if it's before the new minimum
+        
         if (checkOutInput.value && checkOutInput.value <= this.value) {
             checkOutInput.value = minCheckOut;
         }
     });
 
-    // Simpan data booking ke localStorage saat form disubmit
+     
     document.getElementById('bookingForm').addEventListener('submit', function(e) {
         const formData = {
             guest_name: document.getElementById('guest_name').value,
@@ -130,13 +130,13 @@
             created_at: new Date().toISOString()
         };
 
-        // Ambil data booking yang sudah ada
+        
         let bookings = JSON.parse(localStorage.getItem('hotelBookings') || '[]');
         
-        // Tambahkan booking baru
+        
         bookings.push(formData);
         
-        // Simpan kembali ke localStorage
+        
         localStorage.setItem('hotelBookings', JSON.stringify(bookings));
     });
 </script>

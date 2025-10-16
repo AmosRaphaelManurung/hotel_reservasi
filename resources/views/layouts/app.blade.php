@@ -82,6 +82,18 @@
             font-size: 14px;
         }
 
+        /* Sembunyikan icon date picker */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
         input:focus,
         select:focus {
             outline: none;
